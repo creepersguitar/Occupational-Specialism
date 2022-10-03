@@ -1,0 +1,24 @@
+##############################
+# Sign up 
+###############################
+windowS = Window(app, title="Sign up Page")					# defines new window with title
+text_blank = Text(windowS, text=" Sign up")					# Text saying Sign Up
+text_blank = Text(windowS, text=" ")						# separation only
+text = Text(windowS, text= "Enter username")				# text saying enter ussername
+username_textbox = TextBox(windowS)							# textbox allows for input
+text_blank = Text(windowS, text=" ")						# separation only
+text = Text(windowS, text= "Enter Password")				# Text saying enter password
+Password_textbox = TextBox(windowS)							# Textbox allows for input
+text_blank = Text(windowS, text=" ")						# separation only
+text = Text(windowS, text= "Enter your first name")			# text saying enter first name
+fnuser_textbox = TextBox(windowS)							# textbox to allow for input
+text_blank = Text(windowS, text=" ")						# separation only
+text = Text(windowS, text= "Enter your surname")			# text saying enter surname
+Suser_textbox = TextBox(windowS)							# textbox to allow input
+text_blank = Text(windowS, text=" ")						# separation only
+text = Text(windowS, text= "Enter your Email")				# Text saying enter your email
+Euser_textbox = TextBox(windowS)							# TextBox on the window to allow for input
+text_blank = Text(windowS, text=" ")						# separation only
+create_button = PushButton(windowS, text="Create account", command= create_account)				# button to create account
+back_btn = PushButton(windowS, text="Back to home", command= close_window_signup)			# makes button to head back to the home page
+windowS.hide()															# hides window
