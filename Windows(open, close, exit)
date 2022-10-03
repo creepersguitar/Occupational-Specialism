@@ -1,0 +1,24 @@
+#
+def open_window_signup():									# name of def statement
+	windowS.show()												# shows window
+#
+def open_window_login():											# name of def statement
+	windowL.show()													# shows window
+#
+def open_window_review():											# name of def statement
+	windowr.show()													# shows window
+#
+def open_window_pass_reviews():											# name of def statement
+	windowpr.show()															# shows window
+#
+def close_window_Login():												# name of def statement
+	windowL.hide()															# closes window
+#
+def close_window_signup():												# name of def statement
+	windowS.hide()																# closes window
+#
+def close_Review():														# name of def statement
+	windowr.hide()															# closes window
+#
+def Exit_app():															# name of def statement
+	app.destroy()															# exits the app
