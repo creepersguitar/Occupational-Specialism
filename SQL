@@ -1,0 +1,32 @@
+sql = """
+CREATE TABLE "Customer_Table" ( 
+"CustomerID" INTEGER NOT NULL,
+"UserName" TEXT,
+"UserPassword" TEXT,
+"UserFirstName" TEXT,
+"UserSurname" TEXT,
+"Address_L1" TEXT,
+"Address_L2" TEXT,
+"Address_L3" TEXT,
+"EmailAddress" TEXT, 
+PRIMARY KEY("CustomerID" AUTOINCREMENT)
+);
+CREATE TABLE "Review_Table" (
+"ReviewID"  INTEGER NOT NULL,
+"ReviewText" STRING,
+"ReviewTopic"  STRING,
+"CustomerID"  INTEGER,
+PRIMARY KEY("ReviewID" AUTOINCREMENT),
+CONSTRAINT "CustomerID_fk"  FOREIGN KEY("CustomerID") REFERENCES "Customer_Table"("CustomerID")
+);
+insert into Customer_Table (UserName, UserPassword, UserFirstName, UserSurname, EmailAddress) values ('userjoe','pass', 'Joe', 'Harris','joe.@outlook.com');
+insert into Customer_Table (UserName, UserPassword, UserFirstName, UserSurname, EmailAddress) values ('userfred','pass', 'Fred', 'Harrisr','fred.@outlook.com');
+insert into Customer_Table (UserName, UserPassword, UserFirstName, UserSurname, EmailAddress) values ('usermina','pass', 'Mina', 'Kamsena','mina.@outlook.com');
+insert into Customer_Table (UserName, UserPassword, UserFirstName, UserSurname, EmailAddress) values ('george','pass','George','Small','george@outlook.com');
+insert into Review_Table (ReviewText,ReviewTopic,CustomerID) values ('food okay but needs improvement', 'needs seasonning', 1);
+insert into Review_Table (ReviewText,ReviewTopic,CustomerID) values ('satisfied', 'happy', 2);
+insert into Review_Table (ReviewText,ReviewTopic,CustomerID) values ('not the right food', 'wrong food', 2);
+insert into Review_Table (ReviewText,ReviewTopic,CustomerID) values ('perfect food', 'satisfied', 3);
+insert into Review_Table (ReviewText,ReviewTopic,CustomerID) values ('bad food', 'raw food', 3);
+insert into Review_Table (ReviewText,ReviewTopic,CustomerID) values ('satisfied with my food', 'happy', 4);
+"""
