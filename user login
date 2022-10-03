@@ -1,0 +1,18 @@
+def login_user():  #### TEST WITH 'or 1 = 1; -- 
+	global user_LoggedIn ## variable needed to know who logged in ##
+	if userLogin_textbox.value == "":					# if value equals to nothing then
+		info("Error", "You must enter a valid username")	# error message
+	elif PWlogin_textbox.value == "":		# if password equals to nothing then
+		info("Error", "You must enter a password")		# error message
+	else:				# otherwise
+#		Uname = userLogin_textbox.value
+#		Upass = PWlogin_textbox.value
+		sqlselect = ("SELECT * FROM Customer_Table WHERE UserName = "+ "'"+ str(userLogin_textbox.value)+"'"+ " AND UserPassword = "+ "'" + str(PWlogin_textbox.value) + "'")		
+		# select everything from customer table where the username equals to the textbox value and same with password
+		rows = query_database(database_file, sqlselect)
+		if len(rows) == 0: ### This checks that the user was found ###	
+			info("Login","Error not registered create an account or check username and password")
+		else:
+			info("Login","Success login successful")			# informs the user that their login works and is successful
+			user_LoggedIn = rows [0][0]			# shows name
+			open_window_review()			# cals def statement
