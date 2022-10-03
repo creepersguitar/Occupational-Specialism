@@ -1,0 +1,4 @@
+def Save_Review():				# name of def statement
+	InsertSQLSave = ("INSERT INTO Review_Table (ReviewText,ReviewTopic,CustomerID) VALUES ('"+ str(Review_textbox.value) + "', '" + str(comboTopic.value) + "','" + str(user_LoggedIn) + "')")			# inserts into review table the values
+	execute_sql(database_file, InsertSQLSave)				# executes the sql
+	info("Success", "Review Saved onto database")				# informs the user that the review is saved onto a database
