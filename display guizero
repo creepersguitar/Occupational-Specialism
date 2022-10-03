@@ -1,0 +1,4 @@
+#################################
+# build main window             #
+#################################
+app.display()					#displays whole thing
