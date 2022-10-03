@@ -1,0 +1,14 @@
+################################
+#  Review 
+################################
+
+windowr = Window(app, title="Review")										# defines window with new title
+text_blank = Text(windowr, text=" ")											# separation only
+comboTopic = Combo(windowr, options=["canteen", "starbucks", "classrooms", "cafe"])
+Review = Text(windowr, text= "Tell us about your experience")						# Text on this window
+box = Box(windowr, width=300, height=200)											# sets varaiable to a box within the window and having width of 300 height of 200
+Review_textbox = TextBox(box, multiline = True, width='fill', height='fill')			# makes textbox about reviews using multiline being true and the width n height is set to fill
+text_blank = Text(windowr, text=" ")												# separation use only
+save_Btn = PushButton(windowr, text="Save Review", command=Save_Review)									# button to open reviews
+create_button = PushButton(windowr, text="View past reviews", command= open_window_pass_reviews)			# button to open past reviews
+back_btn = PushButton(windowr, text="Back to home", command=close_Review)
