@@ -1,0 +1,8 @@
+#################################
+#Past Reviews
+#################################
+
+windowpr = Window(app, title="Past Reviews")						# defines window with new title
+text = Text(windowpr, text= " Here are your past reviews")			# text appears on window
+
+windowpr.hide()			# hides window
