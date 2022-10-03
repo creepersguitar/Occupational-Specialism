@@ -1,0 +1,14 @@
+###############################
+# Login 
+###############################
+windowL = Window(app, title="Login Page", bg = '#1f4037')										# defines window with title and background color
+text_blank = Text(windowL, text=" ")											# separation only
+text = Text(windowL, text= "Enter username")									# text that says enter username
+userLogin_textbox = TextBox(windowL)											# textbox to allow input
+text_blank = Text(windowL, text=" ")											# separation only
+text = Text(windowL, text= "Enter Password")									# text that says enter password
+PWlogin_textbox = TextBox(windowL)												# makes textbox to allow input
+text_blank = Text(windowL, text=" ")											# separation only
+create_button = PushButton(windowL, text="Login", command= login_user)			# button to login
+back_btn = PushButton(windowL, text="Back home", command= close_window_Login)
+windowL.hide()		
