@@ -1,0 +1,11 @@
+app = App(title="Main Page", height = 600, width = 600, bg = "#c0c0c0")			# main definition of the app with height and width of 600 and bg of c0c0c0 (Silver)
+text_blank = Text(app, text=" ")										# separation only
+text_blank = Text(app, text="Welcome to our Review service")				# text that says review service
+text_blank = Text(app, text=" Please Login to your account")				# text which says login to account
+text_blank = Text(app, text=" ")											# separation only
+picture = Picture(app, image="StarReview.jpg", width = 400 , height = 200)		# adds picture to the page
+text_blank = Text(app, text=" ")										# separation only
+login_button = PushButton(app, text="login", command= open_window_login) # button on app, main window
+text_blank = Text(app, text=" ")										# separation only
+signup_button = PushButton(app, text="sign up", command= open_window_signup) # button on app, main window
+exit_btn = PushButton(app, text="Exit App", command= Exit_app)
