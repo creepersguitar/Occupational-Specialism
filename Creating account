@@ -1,0 +1,18 @@
+def create_account():
+	if username_textbox.value == "":				# if username equals nothing
+		info("Error", "You must enter a valid Username")		# error message
+	elif Password_textbox.value == "":				# if password equals nothing
+		info("Error", "You must enter a Valid Password")		# error message
+	elif fnuser_textbox.value == "":				# if first name equals nothing
+		info("Error", "You must enter a Valid First Name")		# error message
+	elif Suser_textbox.value == "":					# if last name equals nothing
+		info("Error", "You must enter a Valid Last Name")		# error message
+	elif Euser_textbox.value == "":					# if email equals nothing
+		info("Error", "You must enter a Valid Email")			# error message
+	else:									# otherwise you insert it into the customer table within the database
+		InsertSQL = "INSERT INTO Customer_Table (UserName, UserPassword, UserFirstName, UserSurname, EmailAddress) VALUES ('"+ str(fnuser_textbox.value) + "', '" + str(Suser_textbox.value) + "', '" + str(Euser_textbox.value) + "','" +str(username_textbox.value) + "', '" +str(Password_textbox.value)+ "')"
+		# call function to insert record
+		execute_sql(database_file, InsertSQL)					# executes sql statement
+		info("Success","new account created " )						# informs user that new account is made
+		#INSertSQL = ("INSERT into Customer_Table (UserName, UserPassword, UserFirstName, UserSurname, Address_L1, Address_L2, Address_L3, EmailAddress)")
+#
