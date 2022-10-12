@@ -1,0 +1,12 @@
+Dark_mode = PushButton(app, text="Dark mode!", command=Dark_Toggle)
+Light_Mode = PushButton(app, text="Light Mode!", command=Light_Toggle)
+######################
+###### dark mode #####
+######################
+def Dark_Toggle():
+	app.bg = '#2c3e50'
+######################
+##### Light Mode #####
+######################
+def Light_Toggle():
+	app.bg = '#c31432'
