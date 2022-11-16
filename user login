@@ -1,4 +1,4 @@
-def login_user():  #### TEST WITH 'or 1 = 1; -- 
+def login_user():
 	global user_LoggedIn ## variable needed to know who logged in ##
 	if userLogin_textbox.value == "":					# if value equals to nothing then
 		info("Error", "You must enter a valid username")	# error message
