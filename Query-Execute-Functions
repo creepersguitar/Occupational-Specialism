@@ -13,5 +13,5 @@ def execute_sql(database, sql_statement):				# name of execute statement
 	Lconn = sqlite3.connect(database)					# connects to local cursor
 	cur = Lconn.cursor()								# sets cur to local cursor
 	cur.execute(sql_statement)								# execute sql statement
-	Lconn.commit()												# commits tje Lconn
+	Lconn.commit()												# commits the Lconn
 	return cur.lastrowid
