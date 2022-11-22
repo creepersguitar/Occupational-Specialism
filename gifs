@@ -1,0 +1,21 @@
+from guizero import App, Picture, Text, Waffle
+#
+#
+#
+#
+app = App()
+text = Text(app, text=" ")
+text = Text(app, text="Help with Lunges Excercise", size = 14)
+text = Text(app, text=" ")
+
+picture = Picture(app, image="lunges-exercise.gif")
+app.bg = "pink"
+my_waffle = Waffle(app)
+my_waffle[2,1].color = "pink"
+
+# Waffle remembers colour
+print(my_waffle[2,1].color)
+
+#auto-set at the start (which are white by default)
+print(my_waffle[1,1].color)
+app.display()
